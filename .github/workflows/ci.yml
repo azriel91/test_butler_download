@@ -6,6 +6,13 @@ jobs:
     name: Download Butler
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v2
-    - run: powershell -File download_butler.ps1
-      shell: powershell
+      - uses: actions/checkout@v2
+
+      - name: Extract Version
+        id: extract_version
+        run: echo ::set-output name=version::$(echo $GITHUB_REF | ($inputobject -split /)[3])
+
+      - run: powershell -File echo.ps1
+        env:
+          VERSION: ${{ steps.extract_version.outputs.version }}
+        shell: powershell
