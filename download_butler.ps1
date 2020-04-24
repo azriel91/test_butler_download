@@ -18,5 +18,3 @@ iex "$butler_path upgrade --assume-yes --force"
 
 # echo version
 iex "$butler_path --version"
-
-exit 0
