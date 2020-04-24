@@ -1,0 +1,11 @@
+on: push
+
+name: Download
+jobs:
+  download:
+    name: Download Butler
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: download_butler.ps1
+      shell: powershell
