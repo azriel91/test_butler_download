@@ -1,3 +1,3 @@
-Write-Host "Version: ${env::VERSION}"
+Write-Host "Version: ${env:VERSION}"
 
 exit 0
