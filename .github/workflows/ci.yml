@@ -8,6 +8,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
-        download_butler.ps1
+        & download_butler.ps1
         exit 0
       shell: powershell
